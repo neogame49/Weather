@@ -85,7 +85,6 @@
                              @"cnt" : @(numberOfDays)};
     
     [self.requestOperationManager GET:@"forecast/daily" parameters:params success:^(AFHTTPRequestOperation *operation, id responseObject) {
-        NSLog(@"%@", responseObject);
         
          SRWeatherNewsItem* weatherNewsItem = nil;
         

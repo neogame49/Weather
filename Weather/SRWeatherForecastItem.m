@@ -60,8 +60,8 @@
     NSNumber* celvinMinTemperature = temperature[@"min"];
     
     // conver from celvin to celsius
-    NSInteger celsiusMaxTemperature = (NSInteger)(celvinMaxTemperature.doubleValue - 273.15);
-    NSInteger celsiusMinTemperature = (NSInteger)(celvinMinTemperature.doubleValue - 273.15);
+    NSInteger celsiusMaxTemperature = (NSInteger)round(celvinMaxTemperature.doubleValue - 273.15);
+    NSInteger celsiusMinTemperature = (NSInteger)round(celvinMinTemperature.doubleValue - 273.15);
     
     self.temperatureMax = [NSString stringWithFormat:@"%ld", (long)celsiusMaxTemperature];
     self.temperatureMin = [NSString stringWithFormat:@"%ld", (long)celsiusMinTemperature];
