@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<string>Uzhorod</string>
+	<string>Lviv</string>
+	<string>Lutsk</string>
+	<string>Ivano-Frankivsk</string>
+	<string>Chernivtsi</string>
+	<string>Ternopil</string>
+	<string>Rivne</string>
+	<string>Khmelnytskyi</string>
+	<string>Zhitomir</string>
+	<string>Vinnitsa</string>
+	<string>Odessa</string>
+	<string>Kiev</string>
+	<string>Cherkasy</string>
+	<string>Kirovograd</string>
+	<string>Nikolaev</string>
+	<string>Chernihiv</string>
+	<string>Poltava</string>
+	<string>Dnipropetrovsk</string>
+	<string>Kherson</string>
+	<string>Zaporozhye</string>
+	<string>Sumy</string>
+	<string>Kharkiv</string>
+	<string>Donetsk</string>
+	<string>Lugansk</string>
+	<string>My location</string>
+</array>
+</plist>

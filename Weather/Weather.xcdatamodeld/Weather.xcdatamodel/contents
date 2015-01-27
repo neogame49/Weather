@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="6254" systemVersion="14B25" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="SRIcon" representedClassName="SRIcon" syncable="YES">
+        <attribute name="iconID" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="image" optional="YES" attributeType="Transformable" valueTransformerName="SRImageTransformer" syncable="YES"/>
+        <relationship name="owners" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="SRWeatherForecastItem" inverseName="icon" inverseEntity="SRWeatherForecastItem" syncable="YES"/>
+    </entity>
+    <entity name="SRWeatherForecastItem" representedClassName="SRWeatherForecastItem" syncable="YES">
+        <attribute name="clouds" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="date" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="humidity" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="pressure" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="temperatureMax" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="temperatureMin" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="weatherDescription" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="wind" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="icon" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="SRIcon" inverseName="owners" inverseEntity="SRIcon" syncable="YES"/>
+        <relationship name="weatherNewsItem" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="SRWeatherNewsItem" inverseName="weatherForecast" inverseEntity="SRWeatherNewsItem" syncable="YES"/>
+    </entity>
+    <entity name="SRWeatherNewsItem" representedClassName="SRWeatherNewsItem" syncable="YES">
+        <attribute name="city" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="date" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="location" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="weatherForecast" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="SRWeatherForecastItem" inverseName="weatherNewsItem" inverseEntity="SRWeatherForecastItem" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="SRIcon" positionX="0" positionY="0" width="0" height="0"/>
+        <element name="SRWeatherForecastItem" positionX="0" positionY="0" width="0" height="0"/>
+        <element name="SRWeatherNewsItem" positionX="0" positionY="0" width="0" height="0"/>
+    </elements>
+</model>
