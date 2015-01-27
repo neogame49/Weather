@@ -18,7 +18,6 @@ DerivedData
 *.xcuserstate
 <<<<<<< HEAD
 .DS_Store
-Pods/
 =======
 >>>>>>> d99ad90fcb682603af04afc1a90744a627215b30
 
