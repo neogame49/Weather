@@ -157,6 +157,8 @@
 			children = (
 				FA32A1161A6BF66B00649699 /* SRWeatherItemCell.h */,
 				FA32A1171A6BF66B00649699 /* SRWeatherItemCell.m */,
+				FAC98B561A684691004A7D71 /* Main.storyboard */,
+				FAC98B5B1A684691004A7D71 /* LaunchScreen.xib */,
 			);
 			name = view;
 			sourceTree = "<group>";
@@ -199,10 +201,8 @@
 				FAEDAD771A684B0E00E0D55F /* business Logic */,
 				FAC98B4D1A684691004A7D71 /* AppDelegate.h */,
 				FAC98B4E1A684691004A7D71 /* AppDelegate.m */,
-				FAC98B561A684691004A7D71 /* Main.storyboard */,
 				FAC98B501A684691004A7D71 /* Weather.xcdatamodeld */,
 				FAC98B591A684691004A7D71 /* Images.xcassets */,
-				FAC98B5B1A684691004A7D71 /* LaunchScreen.xib */,
 				FAC98B491A684691004A7D71 /* Supporting Files */,
 			);
 			path = Weather;

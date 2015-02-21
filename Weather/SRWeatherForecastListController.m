@@ -191,6 +191,11 @@
 {
     return nil;
 }
+- (BOOL)tableView:(UITableView *)tableView shouldHighlightRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return NO;
+}
+
 
 #pragma mark - Fetched results controller
 
@@ -436,7 +441,7 @@
     [UIApplication sharedApplication].networkActivityIndicatorVisible = YES;
     
     
-    if ([self.location isEqualToString:USER_LOCATION_STR])
+    if ([self.location isEqualToString:USER_LOCATION_STR]) // for user location
     {
         if (IS_OS_8_OR_LATER)
         {
