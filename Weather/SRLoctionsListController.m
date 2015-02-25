@@ -6,7 +6,7 @@
 //  Copyright (c) 2015 Scherbiy Roman. All rights reserved.
 //
 
-#import "SRLactionsListController.h"
+#import "SRLoctionsListController.h"
 #import "SRWeatherForecastListController.h"
 
 #import "SRSettingManager.h"
@@ -14,14 +14,14 @@
 
 
 
-@interface SRLactionsListController () 
+@interface SRLoctionsListController () 
 
 
 
 @property(strong, nonatomic) NSArray* locations;
 @end
 
-@implementation SRLactionsListController
+@implementation SRLoctionsListController
 
 - (void)viewDidLoad
 {

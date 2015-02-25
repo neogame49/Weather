@@ -31,7 +31,7 @@
 		FAC98B691A684691004A7D71 /* WeatherTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FAC98B681A684691004A7D71 /* WeatherTests.m */; };
 		FAEDAD7A1A684B4A00E0D55F /* SRServerManager.m in Sources */ = {isa = PBXBuildFile; fileRef = FAEDAD791A684B4A00E0D55F /* SRServerManager.m */; };
 		FAEDAD7C1A684EEA00E0D55F /* locations.plist in Resources */ = {isa = PBXBuildFile; fileRef = FAEDAD7B1A684EEA00E0D55F /* locations.plist */; };
-		FAEDAD801A685AF000E0D55F /* SRLactionsListController.m in Sources */ = {isa = PBXBuildFile; fileRef = FAEDAD7F1A685AF000E0D55F /* SRLactionsListController.m */; };
+		FAEDAD801A685AF000E0D55F /* SRLoctionsListController.m in Sources */ = {isa = PBXBuildFile; fileRef = FAEDAD7F1A685AF000E0D55F /* SRLoctionsListController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -86,8 +86,8 @@
 		FAEDAD781A684B4A00E0D55F /* SRServerManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SRServerManager.h; sourceTree = "<group>"; };
 		FAEDAD791A684B4A00E0D55F /* SRServerManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SRServerManager.m; sourceTree = "<group>"; };
 		FAEDAD7B1A684EEA00E0D55F /* locations.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = locations.plist; sourceTree = "<group>"; };
-		FAEDAD7E1A685AF000E0D55F /* SRLactionsListController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SRLactionsListController.h; sourceTree = "<group>"; };
-		FAEDAD7F1A685AF000E0D55F /* SRLactionsListController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SRLactionsListController.m; sourceTree = "<group>"; };
+		FAEDAD7E1A685AF000E0D55F /* SRLoctionsListController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SRLoctionsListController.h; sourceTree = "<group>"; };
+		FAEDAD7F1A685AF000E0D55F /* SRLoctionsListController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SRLoctionsListController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -255,8 +255,8 @@
 		FAEDAD7D1A685AC100E0D55F /* controllers */ = {
 			isa = PBXGroup;
 			children = (
-				FAEDAD7E1A685AF000E0D55F /* SRLactionsListController.h */,
-				FAEDAD7F1A685AF000E0D55F /* SRLactionsListController.m */,
+				FAEDAD7E1A685AF000E0D55F /* SRLoctionsListController.h */,
+				FAEDAD7F1A685AF000E0D55F /* SRLoctionsListController.m */,
 				FA32A1191A6C073400649699 /* SRWeatherForecastListController.h */,
 				FA32A11A1A6C073400649699 /* SRWeatherForecastListController.m */,
 			);
@@ -412,7 +412,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FAC98B521A684691004A7D71 /* Weather.xcdatamodeld in Sources */,
-				FAEDAD801A685AF000E0D55F /* SRLactionsListController.m in Sources */,
+				FAEDAD801A685AF000E0D55F /* SRLoctionsListController.m in Sources */,
 				FA32A10D1A6BA96F00649699 /* SRImageTransformer.m in Sources */,
 				FA32A1181A6BF66B00649699 /* SRWeatherItemCell.m in Sources */,
 				FABCF7F41A6D593500EA5B6E /* SRWeatherForecastItem.m in Sources */,

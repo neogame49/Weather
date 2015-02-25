@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface SRLactionsListController : UITableViewController
+@interface SRLoctionsListController : UITableViewController
 
 @end
