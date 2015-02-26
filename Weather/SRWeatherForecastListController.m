@@ -435,7 +435,7 @@
     return resultString;
 }
 
--(void) reloadData
+-(IBAction) reloadData
 {
 
     [UIApplication sharedApplication].networkActivityIndicatorVisible = YES;
@@ -499,7 +499,6 @@
     if ([self.refreshControl isRefreshing])
     {
         [self.refreshControl endRefreshing];
-
     }
     [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
 }
