@@ -302,37 +302,37 @@
                                             <exclude reference="pR7-6n-h4O"/>
                                         </mask>
                                         <mask key="constraints">
+                                            <exclude reference="0Om-BD-pbq"/>
+                                            <exclude reference="t3N-nU-jEa"/>
+                                            <exclude reference="zxC-20-A9K"/>
+                                            <exclude reference="OGc-dY-Zwt"/>
+                                            <exclude reference="kag-Bc-spk"/>
+                                            <exclude reference="rYf-ye-XgD"/>
+                                            <exclude reference="D6k-Fs-PcY"/>
+                                            <exclude reference="Q7z-rF-qRG"/>
+                                            <exclude reference="1OS-jY-Vnm"/>
+                                            <exclude reference="Adf-gt-6CB"/>
+                                            <exclude reference="gVk-k3-LB7"/>
                                             <exclude reference="kka-Ic-dQn"/>
-                                            <exclude reference="PUM-4g-nt0"/>
-                                            <exclude reference="aFh-qU-6OJ"/>
-                                            <exclude reference="GoJ-dh-Izz"/>
-                                            <exclude reference="KgB-4n-xx2"/>
-                                            <exclude reference="TQO-PV-kAt"/>
-                                            <exclude reference="V8q-Wv-se3"/>
+                                            <exclude reference="y9S-i6-fva"/>
+                                            <exclude reference="UAX-tZ-FAk"/>
+                                            <exclude reference="dqW-6y-uOY"/>
+                                            <exclude reference="kGC-n5-QWB"/>
                                             <exclude reference="75P-Mg-AW0"/>
                                             <exclude reference="Ma8-O1-4p1"/>
                                             <exclude reference="OJc-Zp-CXA"/>
                                             <exclude reference="LxE-69-IqG"/>
                                             <exclude reference="afD-Pj-L9A"/>
-                                            <exclude reference="D6k-Fs-PcY"/>
-                                            <exclude reference="Q7z-rF-qRG"/>
-                                            <exclude reference="0Om-BD-pbq"/>
-                                            <exclude reference="t3N-nU-jEa"/>
-                                            <exclude reference="zxC-20-A9K"/>
-                                            <exclude reference="UAX-tZ-FAk"/>
-                                            <exclude reference="dqW-6y-uOY"/>
-                                            <exclude reference="kGC-n5-QWB"/>
-                                            <exclude reference="y9S-i6-fva"/>
-                                            <exclude reference="OGc-dY-Zwt"/>
-                                            <exclude reference="kag-Bc-spk"/>
-                                            <exclude reference="rYf-ye-XgD"/>
-                                            <exclude reference="1OS-jY-Vnm"/>
-                                            <exclude reference="Adf-gt-6CB"/>
-                                            <exclude reference="gVk-k3-LB7"/>
+                                            <exclude reference="PUM-4g-nt0"/>
+                                            <exclude reference="aFh-qU-6OJ"/>
+                                            <exclude reference="C4n-xy-22P"/>
+                                            <exclude reference="GoJ-dh-Izz"/>
+                                            <exclude reference="KgB-4n-xx2"/>
+                                            <exclude reference="TQO-PV-kAt"/>
+                                            <exclude reference="V8q-Wv-se3"/>
                                             <exclude reference="ba4-6D-LP8"/>
                                             <exclude reference="w16-mf-uLH"/>
                                             <exclude reference="waD-JG-2XG"/>
-                                            <exclude reference="C4n-xy-22P"/>
                                         </mask>
                                     </variation>
                                     <variation key="widthClass=regular">
@@ -350,37 +350,37 @@
                                             <include reference="pR7-6n-h4O"/>
                                         </mask>
                                         <mask key="constraints">
+                                            <include reference="0Om-BD-pbq"/>
+                                            <include reference="t3N-nU-jEa"/>
+                                            <include reference="zxC-20-A9K"/>
+                                            <include reference="OGc-dY-Zwt"/>
+                                            <include reference="kag-Bc-spk"/>
+                                            <include reference="rYf-ye-XgD"/>
+                                            <include reference="D6k-Fs-PcY"/>
+                                            <include reference="Q7z-rF-qRG"/>
+                                            <include reference="1OS-jY-Vnm"/>
+                                            <include reference="Adf-gt-6CB"/>
+                                            <include reference="gVk-k3-LB7"/>
                                             <include reference="kka-Ic-dQn"/>
-                                            <include reference="PUM-4g-nt0"/>
-                                            <include reference="aFh-qU-6OJ"/>
-                                            <include reference="GoJ-dh-Izz"/>
-                                            <include reference="KgB-4n-xx2"/>
-                                            <include reference="TQO-PV-kAt"/>
-                                            <include reference="V8q-Wv-se3"/>
+                                            <include reference="y9S-i6-fva"/>
+                                            <include reference="UAX-tZ-FAk"/>
+                                            <include reference="dqW-6y-uOY"/>
+                                            <include reference="kGC-n5-QWB"/>
                                             <include reference="75P-Mg-AW0"/>
                                             <include reference="Ma8-O1-4p1"/>
                                             <include reference="OJc-Zp-CXA"/>
                                             <include reference="LxE-69-IqG"/>
                                             <include reference="afD-Pj-L9A"/>
-                                            <include reference="D6k-Fs-PcY"/>
-                                            <include reference="Q7z-rF-qRG"/>
-                                            <include reference="0Om-BD-pbq"/>
-                                            <include reference="t3N-nU-jEa"/>
-                                            <include reference="zxC-20-A9K"/>
-                                            <include reference="UAX-tZ-FAk"/>
-                                            <include reference="dqW-6y-uOY"/>
-                                            <include reference="kGC-n5-QWB"/>
-                                            <include reference="y9S-i6-fva"/>
-                                            <include reference="OGc-dY-Zwt"/>
-                                            <include reference="kag-Bc-spk"/>
-                                            <include reference="rYf-ye-XgD"/>
-                                            <include reference="1OS-jY-Vnm"/>
-                                            <include reference="Adf-gt-6CB"/>
-                                            <include reference="gVk-k3-LB7"/>
+                                            <include reference="PUM-4g-nt0"/>
+                                            <include reference="aFh-qU-6OJ"/>
+                                            <include reference="C4n-xy-22P"/>
+                                            <include reference="GoJ-dh-Izz"/>
+                                            <include reference="KgB-4n-xx2"/>
+                                            <include reference="TQO-PV-kAt"/>
+                                            <include reference="V8q-Wv-se3"/>
                                             <include reference="ba4-6D-LP8"/>
                                             <include reference="w16-mf-uLH"/>
                                             <include reference="waD-JG-2XG"/>
-                                            <include reference="C4n-xy-22P"/>
                                         </mask>
                                     </variation>
                                 </tableViewCellContentView>
@@ -391,6 +391,9 @@
                             <outlet property="delegate" destination="wBF-qJ-d7T" id="BFf-NI-LVN"/>
                         </connections>
                     </tableView>
+                    <refreshControl key="refreshControl" opaque="NO" multipleTouchEnabled="YES" contentMode="center" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" id="k0G-l9-sbm">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </refreshControl>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="D8T-Xx-crK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -403,7 +406,7 @@
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="5nm-NV-ilX">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <prototypes>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="WeatherItemCell" rowHeight="140" id="T26-X1-QjV" customClass="SRWeatherItemCell">
                                 <autoresizingMask key="autoresizingMask"/>
@@ -416,7 +419,7 @@
                                                 <constraint firstAttribute="width" constant="100" id="TRl-9G-3EZ"/>
                                             </constraints>
                                             <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="mYw-BY-ZK5">
@@ -432,7 +435,7 @@
                                                 <constraint firstAttribute="width" constant="38" id="Y37-FS-yVL"/>
                                             </constraints>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="min:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zit-67-8wy">
@@ -441,7 +444,7 @@
                                                 <constraint firstAttribute="width" constant="33" id="TYg-Jp-Sul"/>
                                             </constraints>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="-10" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j9c-xu-n62">
@@ -450,7 +453,7 @@
                                                 <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="65" id="5vg-yE-Rlx"/>
                                             </constraints>
                                             <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                            <color key="textColor" red="0.80000001192092896" green="0.80000001192092896" blue="0.80000001192092896" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="-10" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JX4-4i-1S4">
@@ -459,7 +462,7 @@
                                                 <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="65" id="BOU-Uo-sLa"/>
                                             </constraints>
                                             <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                            <color key="textColor" red="0.80000001192092896" green="0.80000001192092896" blue="0.80000001192092896" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="description" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="90M-oT-jAs">
@@ -468,7 +471,7 @@
                                                 <constraint firstAttribute="width" constant="150" id="3fB-ua-qWv"/>
                                             </constraints>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Clouds.png" translatesAutoresizingMaskIntoConstraints="NO" id="xtN-PA-U4S">
@@ -502,25 +505,25 @@
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="clouds" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6ZG-YS-Hnu">
                                             <rect key="frame" x="250" y="37" width="46" height="18"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                            <color key="textColor" red="0.80000001192092896" green="0.80000001192092896" blue="0.80000001192092896" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="humidity" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3ki-5U-mic">
                                             <rect key="frame" x="248" y="90" width="59" height="18"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                            <color key="textColor" red="0.80000001192092896" green="0.80000001192092896" blue="0.80000001192092896" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="pressure" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u50-cS-P9f">
                                             <rect key="frame" x="246" y="114" width="59" height="18"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                            <color key="textColor" red="0.80000001192092896" green="0.80000001192092896" blue="0.80000001192092896" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="wind" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Xa-On-VOO">
                                             <rect key="frame" x="250" y="63" width="33" height="18"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                            <color key="textColor" red="0.80000001192092896" green="0.80000001192092896" blue="0.80000001192092896" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
@@ -594,6 +597,9 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Title" id="GJt-0v-rLG"/>
+                    <refreshControl key="refreshControl" opaque="NO" multipleTouchEnabled="YES" contentMode="center" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" id="H2W-ms-XHv">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </refreshControl>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pOz-bR-peU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

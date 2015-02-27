@@ -32,7 +32,6 @@
 @property(strong, nonatomic) successBlock success;
 @property(strong, nonatomic) failureBlock failure;
 
-@property(strong, nonatomic) UIRefreshControl* refreshControl;
 
 @property(strong, nonatomic) SRWeatherNewsItem* weatherNewsItem;
 
@@ -44,9 +43,16 @@
 
 @implementation SRWeatherForecastListController
 
+#pragma live cycle methods
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+
+    UIImageView* tempImageView = [[UIImageView alloc] initWithImage:
+                                  [UIImage imageNamed:@"autumn.jpg"]];
+    self.tableView.backgroundView = tempImageView;
+    self.tableView.backgroundView.layer.zPosition -= 1;
+    
     
     // blocks implementation
     __weak SRWeatherForecastListController* weakSelf = self;
@@ -71,13 +77,11 @@
 
     
     // Initialize the refresh control.
-    self.refreshControl = [[UIRefreshControl alloc] init];
-    self.refreshControl.backgroundColor = [UIColor purpleColor];
+    self.refreshControl.backgroundColor = [UIColor clearColor];
     self.refreshControl.tintColor = [UIColor whiteColor];
     [self.refreshControl addTarget:self action:@selector(reloadData)
                   forControlEvents:UIControlEventValueChanged];
-    
-    
+
     if(self.location)
     {
         // get cached data if it was ceched
@@ -111,12 +115,20 @@
     [[SRDataManager sharedManager] saveContext];
 }
 
+-(void) viewDidLayoutSubviews
+{
+    // has massage label, need to layout
+    if (self.tableView.backgroundView.subviews.count != 0)
+    {
+        [self.tableView.backgroundView.subviews.firstObject setCenter:self.view.center];
+    }
+}
+
 -(void) setWeatherNewsItem:(SRWeatherNewsItem *)weatherNewsItem
 {
     if (![_weatherNewsItem isEqual:weatherNewsItem])
     {
         _weatherNewsItem = weatherNewsItem;
-        //self.fetchedResultsController
     }
 }
 
@@ -148,22 +160,28 @@
     if (numberOfRows > 0)
     {
         tableView.separatorStyle = UITableViewCellSeparatorStyleSingleLine;
-        tableView.backgroundView = nil;
+        // remove messege label if needed
+        [tableView.backgroundView.subviews.firstObject removeFromSuperview];
     }
     else // non data. display massage
     {
-        UILabel* massageLabel = [[UILabel alloc]initWithFrame:CGRectMake(0, 0,
-                                    CGRectGetWidth(self.view.bounds), CGRectGetHeight(self.view.bounds))];
-        
-        massageLabel.text = @"No data is currently available. Try pull down to refresh.";
-        massageLabel.textAlignment = NSTextAlignmentCenter;
-        massageLabel.font = [UIFont systemFontOfSize:20.f];
-        massageLabel.numberOfLines = 0;
-        [massageLabel sizeToFit];
-        
         tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
         
-        tableView.backgroundView = massageLabel;
+        if (self.tableView.backgroundView.subviews.count == 0) // added massage label
+        {
+            UILabel* massageLabel = [[UILabel alloc]initWithFrame:self.view.bounds];
+            
+            massageLabel.text = @"No data is currently available. Try pull down to refresh.";
+            massageLabel.textAlignment = NSTextAlignmentCenter;
+            massageLabel.font = [UIFont systemFontOfSize:20.f];
+            massageLabel.textColor = [UIColor whiteColor];
+            massageLabel.numberOfLines = 0;
+            [massageLabel sizeToFit];
+            
+            
+            [tableView.backgroundView addSubview: massageLabel];
+            massageLabel.center = self.view.center;
+        }
     }
     
     return numberOfRows;
@@ -174,6 +192,8 @@
     static NSString* identifier = @"WeatherItemCell";
     
     SRWeatherItemCell* cell = [tableView dequeueReusableCellWithIdentifier:identifier];
+    cell.backgroundColor = [UIColor clearColor];
+    cell.contentView.backgroundColor = [UIColor clearColor];
     
     [self configCell:cell atIndexPath:indexPath];
     
@@ -381,21 +401,25 @@
 
 -(NSString*) formatedDayStringFromDate:(NSDate*) date
 {
-    if ([date isToday])
-    {
-        return @"Today";
-    }
-    else if ([date isTomorrow])
-    {
-        return @"Tomorrow";
-    }
-    else
-    {
-        NSDateFormatter* dateFormater = [[NSDateFormatter alloc] init];
-        [dateFormater setDateFormat:@"EEEE"];
-        
-        return [dateFormater stringFromDate:date];
-    }
+//    if ([date isToday])
+//    {
+//        return @"Today";
+//    }
+//    else if ([date isTomorrow])
+//    {
+//        return @"Tomorrow";
+//    }
+//    else
+//    {
+//        NSDateFormatter* dateFormater = [[NSDateFormatter alloc] init];
+//        [dateFormater setDateFormat:@"EEEE"];
+//        
+//        return [dateFormater stringFromDate:date];
+//    }
+    NSDateFormatter* dateFormater = [[NSDateFormatter alloc] init];
+    [dateFormater setDateFormat:@"EEE"];
+    
+    return [dateFormater stringFromDate:date].uppercaseString;
 }
 
 -(NSString*) lastUpdateStringFromDate:(NSDate*) date
@@ -435,7 +459,7 @@
     return resultString;
 }
 
--(IBAction) reloadData
+-(void) reloadData
 {
 
     [UIApplication sharedApplication].networkActivityIndicatorVisible = YES;
@@ -477,15 +501,15 @@
     }
     
     // update title on refreshControl
-    if (self.weatherNewsItem.date) // if have date to last update
-    {
-        NSString* lastUpdateStr = [self lastUpdateStringFromDate:self.weatherNewsItem.date];
-        NSDictionary* attributedDictionary = @{NSForegroundColorAttributeName : [UIColor whiteColor]};
-        NSAttributedString* attributedLastUpdateStr =
-        [[NSAttributedString alloc] initWithString:lastUpdateStr attributes:attributedDictionary];
-        
-        self.refreshControl.attributedTitle = attributedLastUpdateStr;
-    }
+//    if (self.weatherNewsItem.date) // if have date to last update
+//    {
+//        NSString* lastUpdateStr = [self lastUpdateStringFromDate:self.weatherNewsItem.date];
+//        NSDictionary* attributedDictionary = @{NSForegroundColorAttributeName : [UIColor whiteColor]};
+//        NSAttributedString* attributedLastUpdateStr =
+//        [[NSAttributedString alloc] initWithString:lastUpdateStr attributes:attributedDictionary];
+//        
+//        self.refreshControl.attributedTitle = attributedLastUpdateStr;
+//    }
    
     
     [self stopRefreshAnimations];

@@ -12,6 +12,5 @@
 
 @property(strong, nonatomic) NSString* location;
 
--(IBAction) reloadData;
 
 @end
