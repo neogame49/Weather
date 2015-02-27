@@ -20,7 +20,7 @@
 		FA8EE7791AA0A1DF00A5B796 /* location icon.png in Resources */ = {isa = PBXBuildFile; fileRef = FA8EE7781AA0A1DF00A5B796 /* location icon.png */; };
 		FA8EE77C1AA0A90E00A5B796 /* SRTemperatureConverter.m in Sources */ = {isa = PBXBuildFile; fileRef = FA8EE77B1AA0A90E00A5B796 /* SRTemperatureConverter.m */; };
 		FAB4D3CB1A6EC44A006C0390 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAB4D3CA1A6EC44A006C0390 /* MapKit.framework */; };
-		FAB4D3CE1A6EE81D006C0390 /* SRSettingManager.m in Sources */ = {isa = PBXBuildFile; fileRef = FAB4D3CD1A6EE81D006C0390 /* SRSettingManager.m */; };
+		FAB4D3CE1A6EE81D006C0390 /* SRSettingsManager.m in Sources */ = {isa = PBXBuildFile; fileRef = FAB4D3CD1A6EE81D006C0390 /* SRSettingsManager.m */; };
 		FABCF7EE1A6D593400EA5B6E /* SRWeatherNewsItem.m in Sources */ = {isa = PBXBuildFile; fileRef = FABCF7ED1A6D593400EA5B6E /* SRWeatherNewsItem.m */; };
 		FABCF7F11A6D593500EA5B6E /* SRIcon.m in Sources */ = {isa = PBXBuildFile; fileRef = FABCF7F01A6D593500EA5B6E /* SRIcon.m */; };
 		FABCF7F41A6D593500EA5B6E /* SRWeatherForecastItem.m in Sources */ = {isa = PBXBuildFile; fileRef = FABCF7F31A6D593500EA5B6E /* SRWeatherForecastItem.m */; };
@@ -68,8 +68,8 @@
 		FA8EE77A1AA0A90E00A5B796 /* SRTemperatureConverter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SRTemperatureConverter.h; sourceTree = "<group>"; };
 		FA8EE77B1AA0A90E00A5B796 /* SRTemperatureConverter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SRTemperatureConverter.m; sourceTree = "<group>"; };
 		FAB4D3CA1A6EC44A006C0390 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
-		FAB4D3CC1A6EE81D006C0390 /* SRSettingManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SRSettingManager.h; sourceTree = "<group>"; };
-		FAB4D3CD1A6EE81D006C0390 /* SRSettingManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SRSettingManager.m; sourceTree = "<group>"; };
+		FAB4D3CC1A6EE81D006C0390 /* SRSettingsManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SRSettingsManager.h; sourceTree = "<group>"; };
+		FAB4D3CD1A6EE81D006C0390 /* SRSettingsManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SRSettingsManager.m; sourceTree = "<group>"; };
 		FABCF7EC1A6D593400EA5B6E /* SRWeatherNewsItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SRWeatherNewsItem.h; sourceTree = "<group>"; };
 		FABCF7ED1A6D593400EA5B6E /* SRWeatherNewsItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SRWeatherNewsItem.m; sourceTree = "<group>"; };
 		FABCF7EF1A6D593500EA5B6E /* SRIcon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SRIcon.h; sourceTree = "<group>"; };
@@ -255,8 +255,8 @@
 				FA26421C1A69B70A00A255C4 /* SRDataManager.m */,
 				FA32A10B1A6BA96F00649699 /* SRImageTransformer.h */,
 				FA32A10C1A6BA96F00649699 /* SRImageTransformer.m */,
-				FAB4D3CC1A6EE81D006C0390 /* SRSettingManager.h */,
-				FAB4D3CD1A6EE81D006C0390 /* SRSettingManager.m */,
+				FAB4D3CC1A6EE81D006C0390 /* SRSettingsManager.h */,
+				FAB4D3CD1A6EE81D006C0390 /* SRSettingsManager.m */,
 				FA8EE77A1AA0A90E00A5B796 /* SRTemperatureConverter.h */,
 				FA8EE77B1AA0A90E00A5B796 /* SRTemperatureConverter.m */,
 			);
@@ -438,7 +438,7 @@
 				FABCF7F11A6D593500EA5B6E /* SRIcon.m in Sources */,
 				FAC98B4C1A684691004A7D71 /* main.m in Sources */,
 				FA8EE77C1AA0A90E00A5B796 /* SRTemperatureConverter.m in Sources */,
-				FAB4D3CE1A6EE81D006C0390 /* SRSettingManager.m in Sources */,
+				FAB4D3CE1A6EE81D006C0390 /* SRSettingsManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

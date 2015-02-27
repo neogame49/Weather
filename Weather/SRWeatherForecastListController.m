@@ -14,7 +14,7 @@
 #import "SRWeatherNewsItem.h"
 #import "SRWeatherForecastItem.h"
 #import "SRIcon.h"
-#import "SRSettingManager.h"
+#import "SRSettingsManager.h"
 #import "NSDate+Utilities.h"
 
 #import "SRWeatherItemCell.h"
@@ -312,7 +312,7 @@
     // location was updated, send request
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
         
-        NSNumber* numberOfDaysWeatherForecast = [[SRSettingManager sharedManager] daysOfWeatherForecast];
+        NSNumber* numberOfDaysWeatherForecast = [[SRSettingsManager sharedManager] daysOfWeatherForecast];
 
         [[SRServerManager sharedManager] getWeatherForecastByLatityde:currentUserLocation.coordinate.latitude andLongtitude:currentUserLocation.coordinate.longitude andDescription:USER_LOCATION_STR numberOfDays:numberOfDaysWeatherForecast onSuccess:self.success onFailure:self.failure ];
     });
@@ -354,7 +354,7 @@
     
     // temperature setup
     SRTemperatureConverter* temperatureConverter = [[SRTemperatureConverter alloc] init];
-    SRTemperatureConverterMeasure measurementScale = [[SRSettingManager sharedManager] measurementScale];
+    SRTemperatureConverterMeasure measurementScale = [[SRSettingsManager sharedManager] measurementScale];
     
     cell.temperatureMaxLabel.text = [temperatureConverter converFromKelvin:
                                      weatherForecastItem.temperatureMax to:measurementScale];
@@ -483,7 +483,7 @@
     }
     else if(self.location) // for all cities
     {
-        NSNumber* numberOfDaysWeatherForecast = [[SRSettingManager sharedManager] daysOfWeatherForecast];
+        NSNumber* numberOfDaysWeatherForecast = [[SRSettingsManager sharedManager] daysOfWeatherForecast];
         
         dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
             [[SRServerManager sharedManager] getWeatherForecastByCityName:self.location numberOfDays:numberOfDaysWeatherForecast onSuccess:self.success onFailure:self.failure];

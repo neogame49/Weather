@@ -9,7 +9,7 @@
 #import "SRLoctionsListController.h"
 #import "SRWeatherForecastListController.h"
 
-#import "SRSettingManager.h"
+#import "SRSettingsManager.h"
 
 #define INDEX_FOR_MY_LOCATION 24
 
@@ -44,7 +44,7 @@
     [super viewWillAppear:animated];
     
     // user back to list. Non current location
-    [[SRSettingManager sharedManager] saveLocation:nil];
+    [[SRSettingsManager sharedManager] saveLocation:nil];
 }
 
 
@@ -101,7 +101,7 @@
         desstinationController.location = location;
         
         // save user location direction
-        [[SRSettingManager sharedManager] saveLocation:location];
+        [[SRSettingsManager sharedManager] saveLocation:location];
     }
 }
 

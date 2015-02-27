@@ -6,17 +6,17 @@
 //  Copyright (c) 2015 Scherbiy Roman. All rights reserved.
 //
 
-#import "SRSettingManager.h"
+#import "SRSettingsManager.h"
 
-@implementation SRSettingManager
+@implementation SRSettingsManager
 
-+(SRSettingManager*) sharedManager
++(SRSettingsManager*) sharedManager
 {
-    static SRSettingManager* manager = nil;
+    static SRSettingsManager* manager = nil;
     
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        manager = [[SRSettingManager alloc] init];
+        manager = [[SRSettingsManager alloc] init];
     });
     
     return manager;

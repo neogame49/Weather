@@ -9,9 +9,9 @@
 #import <Foundation/Foundation.h>
 #import "SRTemperatureConverter.h"
 
-@interface SRSettingManager : NSObject
+@interface SRSettingsManager : NSObject
 
-+(SRSettingManager*) sharedManager;
++(SRSettingsManager*) sharedManager;
 
 -(void) saveLocation:(NSString*) location;
 -(NSString*) loadLocation;

@@ -9,7 +9,7 @@
 #import "AppDelegate.h"
 
 #import "SRDataManager.h"
-#import "SRSettingManager.h"
+#import "SRSettingsManager.h"
 
 #import "SRWeatherForecastListController.h"
 
@@ -22,7 +22,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    NSString* savedUserLocation = [[SRSettingManager sharedManager] loadLocation];
+    NSString* savedUserLocation = [[SRSettingsManager sharedManager] loadLocation];
     
     // if user left behind app on SRSRWeatherForecastListController
     // we saved last location, and now show  SRSRWeatherForecastListController with last location
