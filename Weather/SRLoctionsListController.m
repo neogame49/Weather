@@ -71,6 +71,11 @@
     {
         cell.imageView.image = [UIImage imageNamed:@"location icon.png"];
     }
+    else
+    {
+        cell.imageView.image = nil;
+    }
+        
     
     return cell;
 }

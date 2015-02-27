@@ -8,13 +8,20 @@
 
 #import <Foundation/Foundation.h>
 
-typedef enum
+//typedef enum
+//{
+//    SRTemperatureConverterMeasureCelsius = 0,
+//    SRTemperatureConverterFahrenheit,
+//    SRTemperatureConverterMeasureKelvin
+//    
+//} SRTemperatureConverterMeasure;
+
+typedef NS_ENUM(NSInteger, SRTemperatureConverterMeasure)
 {
     SRTemperatureConverterMeasureCelsius = 0,
     SRTemperatureConverterFahrenheit,
     SRTemperatureConverterMeasureKelvin
-    
-} SRTemperatureConverterMeasure;
+};
 
 @interface SRTemperatureConverter : NSObject
 

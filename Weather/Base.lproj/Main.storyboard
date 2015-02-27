@@ -31,11 +31,115 @@
                             <outlet property="delegate" destination="Mel-Ay-0x0" id="BNc-mZ-sXP"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Locations" id="Iri-yM-e7Q"/>
+                    <navigationItem key="navigationItem" title="Locations" id="Iri-yM-e7Q">
+                        <barButtonItem key="rightBarButtonItem" title="Settings" id="3Kk-Qi-ao0">
+                            <connections>
+                                <segue destination="4gJ-IE-qMc" kind="show" id="khd-IK-Ltw"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qp2-d8-0wx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="954" y="-503"/>
+        </scene>
+        <!--Table View Controller-->
+        <scene sceneID="VwX-iq-pbc">
+            <objects>
+                <tableViewController id="4gJ-IE-qMc" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="8eX-rA-DGW">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <sections>
+                            <tableViewSection id="zTb-t4-eHA">
+                                <cells>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="FRn-PF-Mtg">
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="FRn-PF-Mtg" id="d4e-ko-vHZ">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="measurements scale:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jnH-oB-gxh">
+                                                    <rect key="frame" x="8" y="8" width="187" height="24"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                    <variation key="heightClass=regular-widthClass=compact">
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    </variation>
+                                                </label>
+                                                <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="7tk-Dg-5nO">
+                                                    <rect key="frame" x="503" y="8" width="89" height="29"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="89" id="b0Z-7d-ZUu"/>
+                                                    </constraints>
+                                                    <segments>
+                                                        <segment title="℃"/>
+                                                        <segment title="℉"/>
+                                                        <segment title="ºK"/>
+                                                    </segments>
+                                                </segmentedControl>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="7tk-Dg-5nO" firstAttribute="trailing" secondItem="d4e-ko-vHZ" secondAttribute="trailingMargin" id="2GP-VY-zdf"/>
+                                                <constraint firstItem="7tk-Dg-5nO" firstAttribute="top" secondItem="jnH-oB-gxh" secondAttribute="top" id="P5h-XK-hLg"/>
+                                                <constraint firstItem="jnH-oB-gxh" firstAttribute="leading" secondItem="d4e-ko-vHZ" secondAttribute="leadingMargin" id="fLn-FV-HXe"/>
+                                                <constraint firstItem="7tk-Dg-5nO" firstAttribute="top" secondItem="d4e-ko-vHZ" secondAttribute="topMargin" id="nRp-gh-IWf"/>
+                                                <constraint firstItem="jnH-oB-gxh" firstAttribute="top" secondItem="d4e-ko-vHZ" secondAttribute="topMargin" constant="3" id="oln-Hc-gJS"/>
+                                            </constraints>
+                                            <variation key="default">
+                                                <mask key="constraints">
+                                                    <exclude reference="oln-Hc-gJS"/>
+                                                </mask>
+                                            </variation>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="0bB-JH-6ab">
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="0bB-JH-6ab" id="PoI-8Z-HsC">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="1" translatesAutoresizingMaskIntoConstraints="NO" id="bAR-E7-LGa">
+                                                    <rect key="frame" x="503" y="8" width="89" height="29"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="89" id="gGc-15-Ve3"/>
+                                                    </constraints>
+                                                    <segments>
+                                                        <segment title="5"/>
+                                                        <segment title="7"/>
+                                                        <segment title="9"/>
+                                                    </segments>
+                                                </segmentedControl>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="days of weather forecast:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tgt-fE-1Bl">
+                                                    <rect key="frame" x="8" y="11" width="222" height="24"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                    <variation key="heightClass=regular-widthClass=compact">
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    </variation>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="bAR-E7-LGa" firstAttribute="trailing" secondItem="PoI-8Z-HsC" secondAttribute="trailingMargin" id="5u1-ug-0P6"/>
+                                                <constraint firstItem="bAR-E7-LGa" firstAttribute="top" secondItem="Tgt-fE-1Bl" secondAttribute="top" constant="-3" id="GQm-aC-gN5"/>
+                                                <constraint firstItem="Tgt-fE-1Bl" firstAttribute="leading" secondItem="PoI-8Z-HsC" secondAttribute="leadingMargin" id="JUz-QJ-ZNj"/>
+                                                <constraint firstItem="bAR-E7-LGa" firstAttribute="top" secondItem="PoI-8Z-HsC" secondAttribute="topMargin" id="sRw-oK-Fr0"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="4gJ-IE-qMc" id="hq5-rf-c17"/>
+                            <outlet property="delegate" destination="4gJ-IE-qMc" id="GXI-hE-nJ6"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="AJm-OX-JpH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1622" y="-551"/>
         </scene>
         <!--Weather Forecast List Controller-->
         <scene sceneID="a1U-po-fxA">

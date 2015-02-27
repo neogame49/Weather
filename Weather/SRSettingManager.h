@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "SRTemperatureConverter.h"
 
 @interface SRSettingManager : NSObject
 
@@ -14,5 +15,11 @@
 
 -(void) saveLocation:(NSString*) location;
 -(NSString*) loadLocation;
+
+-(void) saveMeasurementScale:(SRTemperatureConverterMeasure) measurementScale;
+-(SRTemperatureConverterMeasure) measurementScale;
+
+-(void)saveDaysOfWeatherForecast:(NSNumber*) numberOfDays;
+-(NSNumber*) daysOfWeatherForecast;
 
 @end
