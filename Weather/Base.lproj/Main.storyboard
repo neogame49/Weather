@@ -43,10 +43,10 @@
             </objects>
             <point key="canvasLocation" x="954" y="-503"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Settings Controller-->
         <scene sceneID="VwX-iq-pbc">
             <objects>
-                <tableViewController id="4gJ-IE-qMc" sceneMemberID="viewController">
+                <tableViewController id="4gJ-IE-qMc" customClass="SRSettingsController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="8eX-rA-DGW">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -78,6 +78,9 @@
                                                         <segment title="℉"/>
                                                         <segment title="ºK"/>
                                                     </segments>
+                                                    <connections>
+                                                        <action selector="measurementsScaleChanged:" destination="4gJ-IE-qMc" eventType="valueChanged" id="0TG-Xd-EXp"/>
+                                                    </connections>
                                                 </segmentedControl>
                                             </subviews>
                                             <constraints>
@@ -109,6 +112,9 @@
                                                         <segment title="7"/>
                                                         <segment title="9"/>
                                                     </segments>
+                                                    <connections>
+                                                        <action selector="daysOfWeatherForecastChanged:" destination="4gJ-IE-qMc" eventType="valueChanged" id="NXp-SJ-bEd"/>
+                                                    </connections>
                                                 </segmentedControl>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="days of weather forecast:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tgt-fE-1Bl">
                                                     <rect key="frame" x="8" y="11" width="222" height="24"/>
@@ -136,6 +142,10 @@
                             <outlet property="delegate" destination="4gJ-IE-qMc" id="GXI-hE-nJ6"/>
                         </connections>
                     </tableView>
+                    <connections>
+                        <outlet property="daysOfWeatherForecastSegmentControl" destination="bAR-E7-LGa" id="eil-2C-TaT"/>
+                        <outlet property="measurementsScaleSegmentControl" destination="7tk-Dg-5nO" id="0tg-5S-jbN"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AJm-OX-JpH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

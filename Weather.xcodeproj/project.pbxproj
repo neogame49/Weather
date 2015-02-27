@@ -19,6 +19,7 @@
 		FA8EE7771AA0975200A5B796 /* earth2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FA8EE7761AA0975200A5B796 /* earth2.jpg */; };
 		FA8EE7791AA0A1DF00A5B796 /* location icon.png in Resources */ = {isa = PBXBuildFile; fileRef = FA8EE7781AA0A1DF00A5B796 /* location icon.png */; };
 		FA8EE77C1AA0A90E00A5B796 /* SRTemperatureConverter.m in Sources */ = {isa = PBXBuildFile; fileRef = FA8EE77B1AA0A90E00A5B796 /* SRTemperatureConverter.m */; };
+		FA8EE77F1AA0CFE400A5B796 /* SRSettingsController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA8EE77E1AA0CFE400A5B796 /* SRSettingsController.m */; };
 		FAB4D3CB1A6EC44A006C0390 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAB4D3CA1A6EC44A006C0390 /* MapKit.framework */; };
 		FAB4D3CE1A6EE81D006C0390 /* SRSettingsManager.m in Sources */ = {isa = PBXBuildFile; fileRef = FAB4D3CD1A6EE81D006C0390 /* SRSettingsManager.m */; };
 		FABCF7EE1A6D593400EA5B6E /* SRWeatherNewsItem.m in Sources */ = {isa = PBXBuildFile; fileRef = FABCF7ED1A6D593400EA5B6E /* SRWeatherNewsItem.m */; };
@@ -67,6 +68,8 @@
 		FA8EE7781AA0A1DF00A5B796 /* location icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "location icon.png"; sourceTree = "<group>"; };
 		FA8EE77A1AA0A90E00A5B796 /* SRTemperatureConverter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SRTemperatureConverter.h; sourceTree = "<group>"; };
 		FA8EE77B1AA0A90E00A5B796 /* SRTemperatureConverter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SRTemperatureConverter.m; sourceTree = "<group>"; };
+		FA8EE77D1AA0CFE400A5B796 /* SRSettingsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SRSettingsController.h; sourceTree = "<group>"; };
+		FA8EE77E1AA0CFE400A5B796 /* SRSettingsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SRSettingsController.m; sourceTree = "<group>"; };
 		FAB4D3CA1A6EC44A006C0390 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		FAB4D3CC1A6EE81D006C0390 /* SRSettingsManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SRSettingsManager.h; sourceTree = "<group>"; };
 		FAB4D3CD1A6EE81D006C0390 /* SRSettingsManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SRSettingsManager.m; sourceTree = "<group>"; };
@@ -270,6 +273,8 @@
 				FAEDAD7F1A685AF000E0D55F /* SRLoctionsListController.m */,
 				FA32A1191A6C073400649699 /* SRWeatherForecastListController.h */,
 				FA32A11A1A6C073400649699 /* SRWeatherForecastListController.m */,
+				FA8EE77D1AA0CFE400A5B796 /* SRSettingsController.h */,
+				FA8EE77E1AA0CFE400A5B796 /* SRSettingsController.m */,
 			);
 			name = controllers;
 			sourceTree = "<group>";
@@ -435,6 +440,7 @@
 				FAC98B4F1A684691004A7D71 /* AppDelegate.m in Sources */,
 				FA26421D1A69B70A00A255C4 /* SRDataManager.m in Sources */,
 				FAEDAD7A1A684B4A00E0D55F /* SRServerManager.m in Sources */,
+				FA8EE77F1AA0CFE400A5B796 /* SRSettingsController.m in Sources */,
 				FABCF7F11A6D593500EA5B6E /* SRIcon.m in Sources */,
 				FAC98B4C1A684691004A7D71 /* main.m in Sources */,
 				FA8EE77C1AA0A90E00A5B796 /* SRTemperatureConverter.m in Sources */,
