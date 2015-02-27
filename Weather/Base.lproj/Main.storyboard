@@ -22,7 +22,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="wBl-3A-lwq" kind="show" identifier="WeatherForecastList" id="VLv-NZ-oqL"/>
+                                    <segue destination="wBF-qJ-d7T" kind="show" identifier="WeatherForecastList" id="QIg-NT-Sg4"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -37,16 +37,16 @@
             </objects>
             <point key="canvasLocation" x="954" y="-503"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Weather Forecast List Controller-->
         <scene sceneID="a1U-po-fxA">
             <objects>
-                <tableViewController id="wBF-qJ-d7T" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="SRWeatherForecastListController" id="wBF-qJ-d7T" customClass="SRWeatherForecastListController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="vQq-aa-5cg">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="100" id="4Yz-Tr-Dzd">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="WeatherItemCell" rowHeight="100" id="4Yz-Tr-Dzd" customClass="SRWeatherItemCell">
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="4Yz-Tr-Dzd" id="VvY-Tw-9Xi">
                                     <autoresizingMask key="autoresizingMask"/>
@@ -81,7 +81,7 @@
                                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MON" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0v3-w4-NpM">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MON" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0v3-w4-NpM">
                                             <rect key="frame" x="551" y="55" width="41" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -384,6 +384,17 @@
                                         </mask>
                                     </variation>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="cloudsLabel" destination="czL-XZ-WL7" id="RhW-6f-o7f"/>
+                                    <outlet property="dayLabel" destination="0v3-w4-NpM" id="zCN-N0-WKx"/>
+                                    <outlet property="descriptionLabel" destination="SPv-Fx-b4f" id="yUh-PV-IT7"/>
+                                    <outlet property="humidityLabel" destination="pR7-6n-h4O" id="kIt-ax-R4j"/>
+                                    <outlet property="iconImageView" destination="rvR-6g-rr2" id="eZq-Fc-893"/>
+                                    <outlet property="pressureLabel" destination="EsM-zd-l2H" id="Wwp-df-CMc"/>
+                                    <outlet property="temperatureMaxLabel" destination="oiY-9v-hdC" id="aFZ-CO-ep3"/>
+                                    <outlet property="temperatureMinLabel" destination="rMp-FW-3da" id="X7L-lW-9eN"/>
+                                    <outlet property="windLabel" destination="Mnf-sR-lSF" id="OP6-G6-cRC"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -402,13 +413,13 @@
         <!--Title-->
         <scene sceneID="msO-te-nwN">
             <objects>
-                <tableViewController storyboardIdentifier="SRWeatherForecastListController" id="wBl-3A-lwq" customClass="SRWeatherForecastListController" sceneMemberID="viewController">
+                <tableViewController id="wBl-3A-lwq" customClass="SRWeatherForecastListController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="5nm-NV-ilX">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="WeatherItemCell" rowHeight="140" id="T26-X1-QjV" customClass="SRWeatherItemCell">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="140" id="T26-X1-QjV" customClass="SRWeatherItemCell">
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="T26-X1-QjV" id="GXd-Nf-ePr">
                                     <autoresizingMask key="autoresizingMask"/>

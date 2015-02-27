@@ -10,6 +10,7 @@
 
 #import "SRDataManager.h"
 #import "SRServerManager.h"
+#import "SRTemperatureConverter.h"
 #import "SRWeatherNewsItem.h"
 #import "SRWeatherForecastItem.h"
 #import "SRIcon.h"
@@ -47,9 +48,10 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-
+    
+    // setup background image
     UIImageView* tempImageView = [[UIImageView alloc] initWithImage:
-                                  [UIImage imageNamed:@"autumn.jpg"]];
+                                  [UIImage imageNamed:@"earth2.jpg"]];
     self.tableView.backgroundView = tempImageView;
     self.tableView.backgroundView.layer.zPosition -= 1;
     
@@ -77,6 +79,8 @@
 
     
     // Initialize the refresh control.
+    self.refreshControl.attributedTitle = [[NSAttributedString alloc]
+                                           initWithString:@"pull down to refresh"];
     self.refreshControl.backgroundColor = [UIColor clearColor];
     self.refreshControl.tintColor = [UIColor whiteColor];
     [self.refreshControl addTarget:self action:@selector(reloadData)
@@ -348,11 +352,11 @@
     
     cell.descriptionLabel.text = weatherForecastItem.weatherDescription;
     
-    // temperature setup add celsius sumbol
-    cell.temperatureMaxLabel.text =
-                      [weatherForecastItem.temperatureMax stringByAppendingString:@"\u00B0C"];
-    cell.temperatureMinLabel.text =
-                      [weatherForecastItem.temperatureMin stringByAppendingString:@"\u00B0C"];
+    // temperature setup
+    SRTemperatureConverter* temperatureConverter = [[SRTemperatureConverter alloc] init];
+    
+    cell.temperatureMaxLabel.text = [temperatureConverter converFromKelvin:weatherForecastItem.temperatureMax to:SRTemperatureConverterMeasureCelsius];
+    cell.temperatureMinLabel.text = [temperatureConverter converFromKelvin:weatherForecastItem.temperatureMin to:SRTemperatureConverterMeasureCelsius];
     
     //  further stuff setup
     cell.cloudsLabel.text = [weatherForecastItem.clouds stringByAppendingString:@"%"];
@@ -501,15 +505,15 @@
     }
     
     // update title on refreshControl
-//    if (self.weatherNewsItem.date) // if have date to last update
-//    {
-//        NSString* lastUpdateStr = [self lastUpdateStringFromDate:self.weatherNewsItem.date];
-//        NSDictionary* attributedDictionary = @{NSForegroundColorAttributeName : [UIColor whiteColor]};
-//        NSAttributedString* attributedLastUpdateStr =
-//        [[NSAttributedString alloc] initWithString:lastUpdateStr attributes:attributedDictionary];
-//        
-//        self.refreshControl.attributedTitle = attributedLastUpdateStr;
-//    }
+    if (self.weatherNewsItem.date) // if have date to last update
+    {
+        NSString* lastUpdateStr = [self lastUpdateStringFromDate:self.weatherNewsItem.date];
+        NSDictionary* attributedDictionary = @{NSForegroundColorAttributeName : [UIColor whiteColor]};
+        NSAttributedString* attributedLastUpdateStr =
+        [[NSAttributedString alloc] initWithString:lastUpdateStr attributes:attributedDictionary];
+        
+        self.refreshControl.attributedTitle = attributedLastUpdateStr;
+    }
    
     
     [self stopRefreshAnimations];
@@ -517,6 +521,7 @@
     
     [self.tableView reloadData];
 }
+
 
 -(void) stopRefreshAnimations
 {

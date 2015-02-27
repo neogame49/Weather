@@ -58,13 +58,9 @@
     NSDictionary* temperature = requestResult[@"temp"];
     NSNumber* celvinMaxTemperature = temperature[@"max"];
     NSNumber* celvinMinTemperature = temperature[@"min"];
-    
-    // conver from celvin to celsius
-    NSInteger celsiusMaxTemperature = (NSInteger)round(celvinMaxTemperature.doubleValue - 273.15);
-    NSInteger celsiusMinTemperature = (NSInteger)round(celvinMinTemperature.doubleValue - 273.15);
-    
-    self.temperatureMax = [NSString stringWithFormat:@"%ld", (long)celsiusMaxTemperature];
-    self.temperatureMin = [NSString stringWithFormat:@"%ld", (long)celsiusMinTemperature];
+        
+    self.temperatureMax = [celvinMaxTemperature description];
+    self.temperatureMin = [celvinMinTemperature description];
     
     
     // description setup

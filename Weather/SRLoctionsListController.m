@@ -11,7 +11,7 @@
 
 #import "SRSettingManager.h"
 
-
+#define INDEX_FOR_MY_LOCATION 24
 
 
 @interface SRLoctionsListController () 
@@ -66,6 +66,11 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell"];
     
     cell.textLabel.text = self.locations[indexPath.row];
+    
+    if (indexPath.row == INDEX_FOR_MY_LOCATION)
+    {
+        cell.imageView.image = [UIImage imageNamed:@"location icon.png"];
+    }
     
     return cell;
 }
