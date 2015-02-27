@@ -49,13 +49,14 @@
 @implementation SRWeatherForecastListController
 
 #pragma live cycle methods
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     
     // setup background image
     UIImageView* tempImageView = [[UIImageView alloc] initWithImage:
-                                  [UIImage imageNamed:@"earth2.jpg"]];
+                                  [UIImage imageNamed:@"earth.jpg"]];
     self.tableView.backgroundView = tempImageView;
     self.tableView.backgroundView.layer.zPosition -= 1;
     

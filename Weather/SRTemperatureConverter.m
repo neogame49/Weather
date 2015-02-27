@@ -24,17 +24,17 @@ static  NSString*  kKelvinSymbol = @"\u212A";
     {
         case SRTemperatureConverterMeasureKelvin:
             doubleValue = round(doubleValue);
-            result = [[NSString stringWithFormat:@"%ld", (NSInteger)doubleValue]
+            result = [[NSString stringWithFormat:@"%ld", (long)doubleValue]
                       stringByAppendingString:kKelvinSymbol];
             break;
         case SRTemperatureConverterMeasureCelsius:
             doubleValue = round(doubleValue - 273.15);
-            result = [[NSString stringWithFormat:@"%ld", (NSInteger)doubleValue]
+            result = [[NSString stringWithFormat:@"%ld", (long)doubleValue]
                       stringByAppendingString:kCelsiusSymbol];
             break;
         case SRTemperatureConverterFahrenheit:
             doubleValue = round(1.8 * (doubleValue - 273.15) + 32);
-            result = [[NSString stringWithFormat:@"%ld", (NSInteger)doubleValue]
+            result = [[NSString stringWithFormat:@"%ld", (long)doubleValue]
                       stringByAppendingString:kFahrenheitSymbol];
 
             break;
