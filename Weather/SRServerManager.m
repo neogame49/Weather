@@ -45,13 +45,13 @@
 
 
 
-- (void) getWeatherForecastByCityName:(NSString*) cityName numberOfDays:(NSInteger) numberOfDays
+- (void) getWeatherForecastByCityName:(NSString*) cityName numberOfDays:(NSNumber*) numberOfDays
                            onSuccess:(successBlock) success
                            onFailure:(failureBlock) failure
 {
 
      NSDictionary* params = @{@"q" : cityName,
-                              @"cnt" : @(numberOfDays)};
+                              @"cnt" : numberOfDays};
     
     [self.requestOperationManager GET:@"forecast/daily" parameters:params success:^(AFHTTPRequestOperation *operation, id responseObject) {
         
@@ -76,13 +76,13 @@
 }
 
 - (void) getWeatherForecastByLatityde:(double) latitude andLongtitude:(double) longtitude
-                       andDescription:(NSString*) description numberOfDays:(NSInteger) numberOfDays
+                       andDescription:(NSString*) description numberOfDays:(NSNumber*) numberOfDays
                             onSuccess:(successBlock) success
                             onFailure:(failureBlock) failure
 {
     NSDictionary* params = @{@"lat" : @(latitude),
                              @"lon" : @(longtitude),
-                             @"cnt" : @(numberOfDays)};
+                             @"cnt" : numberOfDays};
     
     [self.requestOperationManager GET:@"forecast/daily" parameters:params success:^(AFHTTPRequestOperation *operation, id responseObject) {
         

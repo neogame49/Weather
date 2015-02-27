@@ -14,6 +14,7 @@
 #import "SRWeatherNewsItem.h"
 #import "SRWeatherForecastItem.h"
 #import "SRIcon.h"
+#import "SRSettingManager.h"
 #import "NSDate+Utilities.h"
 
 #import "SRWeatherItemCell.h"
@@ -22,8 +23,6 @@
 #import <MapKit/MapKit.h>
 
 #define IS_OS_8_OR_LATER ([[[UIDevice currentDevice] systemVersion] floatValue] >= 8.0)
-
-#define NUMBER_OF_DAYS_FOR_WEATHER_FORECAST 7
 
 #define USER_LOCATION_STR @"My location"
 
@@ -313,7 +312,9 @@
     // location was updated, send request
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
         
-        [[SRServerManager sharedManager] getWeatherForecastByLatityde:currentUserLocation.coordinate.latitude andLongtitude:currentUserLocation.coordinate.longitude andDescription:USER_LOCATION_STR numberOfDays:NUMBER_OF_DAYS_FOR_WEATHER_FORECAST onSuccess:self.success onFailure:self.failure ];
+        NSNumber* numberOfDaysWeatherForecast = [[SRSettingManager sharedManager] daysOfWeatherForecast];
+
+        [[SRServerManager sharedManager] getWeatherForecastByLatityde:currentUserLocation.coordinate.latitude andLongtitude:currentUserLocation.coordinate.longitude andDescription:USER_LOCATION_STR numberOfDays:numberOfDaysWeatherForecast onSuccess:self.success onFailure:self.failure ];
     });
     
     
@@ -346,7 +347,6 @@
 #pragma mark - supported methods
 -(void) configCell:(SRWeatherItemCell*) cell atIndexPath:(NSIndexPath*) indexPath
 {
-    //SRWeatherForecastItem* weatherForecastItem = self.weatherForecast[indexPath.row];
     SRWeatherForecastItem* weatherForecastItem =
     [self.fetchedResultsController objectAtIndexPath:indexPath];
     
@@ -354,9 +354,12 @@
     
     // temperature setup
     SRTemperatureConverter* temperatureConverter = [[SRTemperatureConverter alloc] init];
+    SRTemperatureConverterMeasure measurementScale = [[SRSettingManager sharedManager] measurementScale];
     
-    cell.temperatureMaxLabel.text = [temperatureConverter converFromKelvin:weatherForecastItem.temperatureMax to:SRTemperatureConverterMeasureCelsius];
-    cell.temperatureMinLabel.text = [temperatureConverter converFromKelvin:weatherForecastItem.temperatureMin to:SRTemperatureConverterMeasureCelsius];
+    cell.temperatureMaxLabel.text = [temperatureConverter converFromKelvin:
+                                     weatherForecastItem.temperatureMax to:measurementScale];
+    cell.temperatureMinLabel.text = [temperatureConverter converFromKelvin:
+                                     weatherForecastItem.temperatureMin to:measurementScale];
     
     //  further stuff setup
     cell.cloudsLabel.text = [weatherForecastItem.clouds stringByAppendingString:@"%"];
@@ -480,8 +483,10 @@
     }
     else if(self.location) // for all cities
     {
+        NSNumber* numberOfDaysWeatherForecast = [[SRSettingManager sharedManager] daysOfWeatherForecast];
+        
         dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-            [[SRServerManager sharedManager] getWeatherForecastByCityName:self.location numberOfDays:NUMBER_OF_DAYS_FOR_WEATHER_FORECAST onSuccess:self.success onFailure:self.failure];
+            [[SRServerManager sharedManager] getWeatherForecastByCityName:self.location numberOfDays:numberOfDaysWeatherForecast onSuccess:self.success onFailure:self.failure];
         });
         
     }
