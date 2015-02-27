@@ -409,21 +409,6 @@
 
 -(NSString*) formatedDayOfWeekStringFromDate:(NSDate*) date
 {
-//    if ([date isToday])
-//    {
-//        return @"Today";
-//    }
-//    else if ([date isTomorrow])
-//    {
-//        return @"Tomorrow";
-//    }
-//    else
-//    {
-//        NSDateFormatter* dateFormater = [[NSDateFormatter alloc] init];
-//        [dateFormater setDateFormat:@"EEEE"];
-//        
-//        return [dateFormater stringFromDate:date];
-//    }
     NSDateFormatter* dateFormater = [[NSDateFormatter alloc] init];
     [dateFormater setDateFormat:@"EEE"];
     

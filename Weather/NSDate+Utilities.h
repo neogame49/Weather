@@ -11,8 +11,6 @@
 @interface NSDate (Utilities)
 
 
-- (BOOL) isToday;
-- (BOOL) isTomorrow;
 
 
 - (NSInteger) minutesAfterDate: (NSDate *) date;

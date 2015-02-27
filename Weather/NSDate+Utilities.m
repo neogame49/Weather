@@ -11,18 +11,6 @@
 @implementation NSDate (Utilities)
 
 
-- (BOOL) isToday
-{
-    NSDate* today = [NSDate date];
-    
-    return [self isEqualToDateIgnoringTime:today];
-}
-- (BOOL) isTomorrow
-{
-    NSDate* yesterday = [NSDate dateWithTimeIntervalSinceNow:60*60*24];
-    
-    return [self isEqualToDateIgnoringTime:yesterday];
-}
 
 - (NSInteger) minutesAfterDate: (NSDate *) date
 {
