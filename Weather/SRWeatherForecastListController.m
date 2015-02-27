@@ -16,6 +16,7 @@
 #import "SRIcon.h"
 #import "SRSettingsManager.h"
 #import "NSDate+Utilities.h"
+#import "SRCellAnimator.h"
 
 #import "SRWeatherItemCell.h"
 
@@ -38,6 +39,10 @@
 @property(strong, nonatomic) NSFetchedResultsController* fetchedResultsController;
 
 @property(strong, nonatomic) CLLocationManager* locationManager;
+
+// flag seted to YES when weather data begining download and setted YES when download is finished
+// used for check to prevant animation bug
+@property(assign, nonatomic) BOOL isDataDownloaded;
 
 @end
 
@@ -217,6 +222,14 @@
 - (BOOL)tableView:(UITableView *)tableView shouldHighlightRowAtIndexPath:(NSIndexPath *)indexPath
 {
     return NO;
+}
+
+-(void) tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if (self.isDataDownloaded)
+    {
+        [SRCellAnimator appearAnimationForCell:cell duration:1.4];
+    }
 }
 
 
@@ -465,7 +478,7 @@
 {
 
     [UIApplication sharedApplication].networkActivityIndicatorVisible = YES;
-    
+    self.isDataDownloaded = NO;
     
     if ([self.location isEqualToString:USER_LOCATION_STR]) // for user location
     {
@@ -486,8 +499,7 @@
         
     }
     
-    
-    
+    self.isDataDownloaded = YES;
 }
 
 -(void) updateUIElements
@@ -519,7 +531,8 @@
     [self stopRefreshAnimations];
     
     
-    [self.tableView reloadData];
+    //[self.tableView reloadData];
+    
 }
 
 
