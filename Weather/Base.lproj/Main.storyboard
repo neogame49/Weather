@@ -500,7 +500,8 @@
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="cloudsLabel" destination="czL-XZ-WL7" id="RhW-6f-o7f"/>
-                                    <outlet property="dayLabel" destination="0v3-w4-NpM" id="zCN-N0-WKx"/>
+                                    <outlet property="dayOfMonthLabel" destination="MkZ-dJ-gIK" id="ivw-ge-dfr"/>
+                                    <outlet property="dayOfWeekLabel" destination="0v3-w4-NpM" id="3FI-gg-zcJ"/>
                                     <outlet property="descriptionLabel" destination="SPv-Fx-b4f" id="yUh-PV-IT7"/>
                                     <outlet property="humidityLabel" destination="pR7-6n-h4O" id="kIt-ax-R4j"/>
                                     <outlet property="iconImageView" destination="rvR-6g-rr2" id="eZq-Fc-893"/>
@@ -705,7 +706,7 @@
                                 <color key="backgroundColor" red="0.28056747372158874" green="0.49896576117908875" blue="0.80000001192092896" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
                                     <outlet property="cloudsLabel" destination="6ZG-YS-Hnu" id="vc8-eH-wx7"/>
-                                    <outlet property="dayLabel" destination="7UR-x7-Ulu" id="2Fl-1Y-lcK"/>
+                                    <outlet property="dayOfWeekLabel" destination="7UR-x7-Ulu" id="X0X-uv-pOJ"/>
                                     <outlet property="descriptionLabel" destination="90M-oT-jAs" id="cbR-fo-SIL"/>
                                     <outlet property="humidityLabel" destination="3ki-5U-mic" id="C6F-gN-vEP"/>
                                     <outlet property="iconImageView" destination="mYw-BY-ZK5" id="PRh-jx-mfV"/>

@@ -9,7 +9,8 @@
 #import <UIKit/UIKit.h>
 
 @interface SRWeatherItemCell : UITableViewCell
-@property (weak, nonatomic) IBOutlet UILabel *dayLabel;
+@property (weak, nonatomic) IBOutlet UILabel *dayOfWeekLabel;
+@property (weak, nonatomic) IBOutlet UILabel *dayOfMonthLabel;
 @property (weak, nonatomic) IBOutlet UILabel *descriptionLabel;
 @property (weak, nonatomic) IBOutlet UILabel *temperatureMaxLabel;
 @property (weak, nonatomic) IBOutlet UILabel *temperatureMinLabel;

@@ -372,7 +372,8 @@
     cell.pressureLabel.text = [convertedPressureStr stringByAppendingString:@" KhPa"];
     
     // day setup
-    cell.dayLabel.text = [self formatedDayStringFromDate:weatherForecastItem.date];
+    cell.dayOfWeekLabel.text = [self formatedDayOfWeekStringFromDate:weatherForecastItem.date];
+    cell.dayOfMonthLabel.text = [self formatedDayOfMonthStringFromDate:weatherForecastItem.date];
     
     // icon setup
     // if icon was cached show them
@@ -406,7 +407,7 @@
     return [[baseImageURLString stringByAppendingString:imageID] stringByAppendingString:@".png"];
 }
 
--(NSString*) formatedDayStringFromDate:(NSDate*) date
+-(NSString*) formatedDayOfWeekStringFromDate:(NSDate*) date
 {
 //    if ([date isToday])
 //    {
@@ -428,6 +429,15 @@
     
     return [dateFormater stringFromDate:date].uppercaseString;
 }
+
+-(NSString*) formatedDayOfMonthStringFromDate:(NSDate*) date
+{
+    NSDateFormatter* dateFormater = [[NSDateFormatter alloc] init];
+    [dateFormater setDateFormat:@"dd"];
+    
+    return [dateFormater stringFromDate:date].uppercaseString;
+}
+
 
 -(NSString*) lastUpdateStringFromDate:(NSDate*) date
 {
